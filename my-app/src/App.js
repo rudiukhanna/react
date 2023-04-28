@@ -1,9 +1,11 @@
 import React from 'react';
-import Image from './Image';
+import Contacts from './Contacts';
+import Experience from './Experience';
 
 function App() {
   return <div>
-    <Image/>
+    <Contacts/>
+    <Experience/>
   </div>
 }
 
