@@ -1,0 +1,224 @@
+.main-theme {
+  --color-background-sidebar: #86A3B4;
+  --color-main-background: #FFFFFF;
+  --color-text-primary: #263036;
+  --color-text-headings: #1E1E1E;
+  --color-text-work-experience: #000000;
+  --color-accent: #1C2E8C;
+  --color-languages-text: #1E1E1E;
+}
+
+.my-theme {
+  --color-background-sidebar: #F49D40;
+  --color-main-background: #F6F5AE;
+  --color-text-primary: #565554;
+  --color-text-headings:#F24236;
+  --color-text-work-experience: #000000;
+  --color-accent: #F24236;
+  --color-languages-text: #565554;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.cv-page {
+  display: flex;
+  padding: 0 15px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar-container {
+  padding: 0 40px;
+}
+
+.container {
+  padding: 25px 0 50px;
+}
+
+.sidebar {
+  background-color: var(--color-background-sidebar);
+  box-shadow: 2px 2px 5px 5px #c6c7c6;
+  border: 1px solid var(--color-text-headings);
+  animation-name: sidebarUp;
+  animation-duration: 1s;
+  animation-fill-mode: none;
+}
+
+@keyframes sidebarUp {
+  80% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(350px);
+    opacity: 0;
+  }
+}
+.sidebar-info h1 {
+  font-size: 40px;
+  color: var(--color-main-background);
+}
+
+.sidebar-name, .form-link {
+  color: var(--color-accent);
+}
+
+.photo-enlarge {
+  cursor: pointer;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transform: scale(2) translateY(30px);
+  transform-origin: left;
+  transition: all ease 1s;
+}
+
+.photo-reduce {
+  cursor: pointer;
+  transform: scale(1);
+  transition: all ease 1s;
+}
+
+.sidebar-title {
+  margin: 0;
+  margin-top: 35px 0 10px;
+  padding-bottom: 15px;
+  font-size: 32px;
+  color: var(--color-text-primary);
+  border-bottom: 5px solid var(--color-text-headings);
+}
+
+.sidebar-subtitle {
+  margin: 0;
+  margin: 35px 0 10px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  color: var(--color-text-primary);
+}
+
+.address p {
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.phone-link {
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.link {
+  font-size: 16px;
+  color: var(--color-accent);
+}
+
+.languages p {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-languages-text);
+}
+
+.main-content {
+  background-color: var(--color-main-background);
+  padding: 60px 55px 150px;
+  font-weight: 400;
+  animation-name: mainUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: none;
+}
+@keyframes mainUp {
+  80% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(350px);
+    opacity: 0;
+  }
+}
+
+.title {
+  margin: 0;
+  margin-right: 45px;
+  padding-bottom: 15px;
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--color-text-headings);
+  border-bottom: 5px solid var(--color-text-work-experience);
+}
+
+.title-letter {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 3px 8px;
+  border: 1px solid black;
+}
+
+.work-definition {
+  font-weight: 600;
+}
+
+.job {
+  opacity: 0.7;
+}
+.job:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.1s ease-in;
+}
+
+/* Summary */
+.summary-about {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+/* Skills highlights */
+.skills ul {
+  -moz-column-count: 2;
+       column-count: 2;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Work Experience */
+.work-content {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text-work-experience);
+}
+
+/* Education */
+.education-content {
+  color: var(--color-text-primary);
+}
+
+@media screen and (max-width: 550px) {
+  .cv-page {
+    flex-direction: column;
+    padding: 0 15px;
+    min-width: 350px;
+  }
+  .sidebar-container {
+    padding: 10px;
+  }
+  .sidebar-photo {
+    background-size: cover;
+  }
+  .main-content {
+    padding: 25px 10px 50px;
+  }
+  .title {
+    margin-right: 10px;
+  }
+  .job {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */
