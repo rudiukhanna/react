@@ -1,7 +1,6 @@
 import React from 'react';
 
-function Contacts(props) {
-    console.log(props)
+function Contacts() {
      return  <>
      <div className="sidebar-container">
 

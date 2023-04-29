@@ -5,7 +5,7 @@ import Image from './Image';
 import '../src/styles.scss/styles.css'
 
 function App() {
-  return <div>
+  return <div className='main-theme'>
     <Image src="/CVphoto.jpg" />
     <Contacts/>
     <Experience/>
