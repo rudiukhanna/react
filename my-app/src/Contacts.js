@@ -1,32 +1,33 @@
 import React from 'react';
 
-function Contacts() {
+function Contacts(props) {
+    console.log(props)
      return  <>
-     <div class="sidebar-container">
+     <div className="sidebar-container">
 
-<div class="contact">
-    <h2 class="sidebar-title">Contact</h2>
+<div className="contact">
+    <h2 className="sidebar-title">Contact</h2>
        
-    <div class="address">
-        <h3 class="sidebar-subtitle">Address</h3>
+    <div className="address">
+        <h3 className="sidebar-subtitle">Address</h3>
         <p>Irpin, Ukraine</p>
     </div>
 
     <div>
-        <h3 class="sidebar-subtitle">Phone</h3>
-        <a href="tel:+380984691749" class="phone-link">+380984691749</a>
+        <h3 className="sidebar-subtitle">Phone</h3>
+        <a href="tel:+380984691749" className="phone-link">+380984691749</a>
     </div>
 
     <div>
-        <h3 class="sidebar-subtitle">E-mail</h3>
+        <h3 className="sidebar-subtitle">E-mail</h3>
         <a href="mailto:melomanna@gmail.com"
-           class="link">melomanna@gmail.com</a>
+           className="link">melomanna@gmail.com</a>
     </div>
 
     <div>
-        <h3 class="sidebar-subtitle">Linkedin</h3>
+        <h3 className="sidebar-subtitle">Linkedin</h3>
         <a href="https://www.linkedin.com/in/hannarudiuk/"
-           class="link">https://www.linkedin.com/in/hannarudiuk/</a>
+           className="link">https://www.linkedin.com/in/hannarudiuk/</a>
     </div>
     
   </div>
