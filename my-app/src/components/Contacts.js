@@ -1,7 +1,5 @@
-import React from 'react';
-
-function Contacts() {
-     return  <>
+export function Contacts() {
+     return  (
      <div className="sidebar-container">
 
 <div className="contact">
@@ -31,7 +29,6 @@ function Contacts() {
     
   </div>
 </div>
-     </>
+    );
 }
 
-export default Contacts;

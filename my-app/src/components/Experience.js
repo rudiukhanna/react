@@ -1,7 +1,5 @@
-import React from 'react';
-
-function Experience() {
-    return <>
+export function Experience() {
+    return (
     <div className="work">
 
     <h2 className="title">Work experience</h2>
@@ -30,7 +28,6 @@ function Experience() {
 
     </div>
     </div>
-</>
+    );  
 }
 
-export default Experience;
