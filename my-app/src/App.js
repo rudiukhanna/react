@@ -6,11 +6,23 @@ import '../src/styles.scss/styles.css'
 const photoLink = './CVphoto.jpg';
 
 function App() {
-  return <div className='main-theme'>
-    <Image imageLink = {photoLink} />
-    <Contacts/>
+  return (
+    <body className='main-theme'>
+      <div className='cv-page'>
+        <header className='sidebar'>
+          <Image imageLink = {photoLink}/>
+          <div className='sidebar-container'>
+            <Contacts/>
+          </div>
+            
+       
+          
+        </header>
+   
     <Experience/>
-  </div>
+      </div>
+  </body>
+  )
 }
 
 export default App;
