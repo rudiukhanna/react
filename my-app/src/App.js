@@ -18,17 +18,27 @@ function App() {
       setWorkExperienceItems([...workExperienceItems, newItem]);
     }
   
-  return (
+  return ( 
     <div className='main-theme'>
-    <Image imageLink = {photoLink} />
-    <Contacts />
+    <div className='cv-page'>
+      <header className='sidebar'>
+        <Image imageLink = {photoLink} />
+        <Contacts />
+      </header>
+      <main>
+        <div className='main-content'>
+          <div className='work'>
     <Experience />
     {workExperienceItems.map(item => (
           <WorkExperienceItem key={item.name} {...item} />
         ))}
         <WorkExperienceForm onAddItem={addWorkExperience} />
     <Counter/>
-  </div>
+        </div>
+      </div>
+    </main>
+    </div>
+    </div>
   );
 }
 

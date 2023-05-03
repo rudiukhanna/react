@@ -19,9 +19,9 @@ export default function WorkExperienceForm(props) {
   
     return (
           <form onSubmit={handleSubmit}>
-          <h2>Add new work experience</h2>
-          <div className="form-group">
-            <label htmlFor="name">Name of employer</label>
+          <h3 className='work-definition'>Add new work experience</h3>
+          <div className="form-wrapper">
+            <label htmlFor="name" className='work-definition'>Name of employer </label>
             <input
               type="text"
               id="name"
@@ -29,25 +29,25 @@ export default function WorkExperienceForm(props) {
               onChange={event => setName(event.target.value)}
             />
           </div>
-    <div className="form-group">
-    <label htmlFor="title">Job title</label>
-    <input
-    type="text"
-    id="title"
-    value={title}
-    onChange={event => setTitle(event.target.value)}
-    />
-    </div>
-    <div className="form-group">
-    <label htmlFor="description">Job description</label>
-    <textarea
-    id="description"
-    value={description}
-    onChange={event => setDescription(event.target.value)}
-    ></textarea>
-    </div>
-    <button type="submit">Add experience</button>
-    </form>
+            <div className="form-wrapper">
+            <label htmlFor="title" className='work-definition'>Job title </label>
+            <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={event => setTitle(event.target.value)}
+            />
+            </div>
+            <div className="form-wrapper">
+            <label htmlFor="description" className='work-definition'>Job description</label>
+            <textarea
+            id="description"
+            value={description}
+            onChange={event => setDescription(event.target.value)}
+            ></textarea>
+            </div>
+            <button type="submit" className='form-button'>Add experience</button>
+            </form>
     );
     }
    

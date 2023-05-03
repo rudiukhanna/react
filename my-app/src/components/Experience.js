@@ -30,6 +30,7 @@ import  WorkExperienceItem from "./WorkExperienceItem";
     <div className="work">
       <h2 className="title">Work experience</h2>
       <div className="container">
+        <div className="work-content">
         {workExperience.map((item, index) => (
           <WorkExperienceItem
             key={index}
@@ -39,6 +40,7 @@ import  WorkExperienceItem from "./WorkExperienceItem";
             link={item.link}
           />
         ))}
+        </div>
       </div>
     </div>
   );
