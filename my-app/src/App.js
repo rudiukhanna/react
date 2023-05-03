@@ -10,16 +10,17 @@ function App() {
     <body className='main-theme'>
       <div className='cv-page'>
         <header className='sidebar'>
-          <Image imageLink = {photoLink}/>
-          <div className='sidebar-container'>
-            <Contacts/>
+          <div className='sidebar-photo'>
+              <Image imageLink = {photoLink}/>
           </div>
-            
-       
-          
+         
+          <Contacts/>        
         </header>
-   
-    <Experience/>
+     <main>
+      <div className='main-content'>
+          <Experience/>
+      </div>
+     </main>
       </div>
   </body>
   )

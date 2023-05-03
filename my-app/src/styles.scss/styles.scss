@@ -113,16 +113,16 @@ body {
     @extend .sidebar-name;
 }
 
-// .sidebar-photo {
-//     margin: $sidebarPhotoMargin;
-//     width: 100%;
-//     height: $mainHeight;
-//     background: {
-//         repeat: no-repeat;
-//         size: cover;
-//         position: center;
-//     }
-// }
+.sidebar-photo {
+    margin: $sidebarPhotoMargin;
+    width: 100%;
+    height: $mainHeight;
+    background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+}
  
 
 // класи для анімації фото
