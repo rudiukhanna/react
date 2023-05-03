@@ -19,16 +19,19 @@ function App() {
     }
   
   return ( 
-    <div className='main-theme'>
+    <body className='main-theme'>
     <div className='cv-page'>
       <header className='sidebar'>
-        <Image imageLink = {photoLink} />
-        <Contacts />
+        <div className='sidebar-photo'>
+            <Image imageLink = {photoLink}/>
+        </div>
+       
+        <Contacts/>        
       </header>
-      <main>
+   <main>
         <div className='main-content'>
           <div className='work'>
-    <Experience />
+            <Experience />
     {workExperienceItems.map(item => (
           <WorkExperienceItem key={item.name} {...item} />
         ))}
@@ -38,7 +41,7 @@ function App() {
       </div>
     </main>
     </div>
-    </div>
+    </body>
   );
 }
 
