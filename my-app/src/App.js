@@ -30,14 +30,12 @@ function App() {
       </header>
    <main>
         <div className='main-content'>
-          <div className='work'>
             <Experience />
     {workExperienceItems.map(item => (
           <WorkExperienceItem key={item.name} {...item} />
         ))}
         <WorkExperienceForm onAddItem={addWorkExperience} />
     <Counter/>
-        </div>
       </div>
     </main>
     </div>
