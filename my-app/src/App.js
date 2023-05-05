@@ -1,7 +1,8 @@
 import { Contacts } from './components/Contacts';
 import { Experience } from './components/Experience';
 import { Image } from './components/Image';
-import '../src/styles.scss/styles.css'
+import '../src/styles/styles.css'
+import { Github } from './components/Github';
 
 const photoLink = './CVphoto.jpg';
 
@@ -19,6 +20,7 @@ function App() {
      <main>
       <div className='main-content'>
           <Experience/>
+          <Github/>
       </div>
      </main>
       </div>

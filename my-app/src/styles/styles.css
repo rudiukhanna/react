@@ -34,6 +34,10 @@ body {
   line-height: 1.2;
 }
 
+ul {
+  list-style-type: square;
+}
+
 a {
   text-decoration: none;
 }
@@ -207,6 +211,15 @@ a {
 /* Education */
 .education-content {
   color: var(--color-text-primary);
+}
+
+.repo {
+  border: 1px solid var(--color-accent);
+  padding: 5px;
+  margin: 5px;
+}
+.repo > a {
+  color: var(--color-accent);
 }
 
 @media screen and (max-width: 550px) {
