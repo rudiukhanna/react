@@ -1,0 +1,311 @@
+// Variables for scss (sizes, common styles)
+
+$marginClear: 0;
+$boxSizing: border-box;
+$display: flex;
+$mainPadding: 0 15px;
+$mainWidth: 385px;
+$mainHeight: 290px;
+$containerPadding: 25px 0 50px;
+$sidebarContainerPadding: 0 40px;
+$sidebarPhotoMargin: 35px 0;
+$sidebarTitleMarginTop: 35px;
+$mainContentPadding: 60px 55px 150px;
+$sidebarSubtitleMargin: 35px 0 10px;
+$titlePaddingBottom: 15px;
+$titleBorderBottom: 5px;
+$fontStyle: normal;
+$textDecoration: none;
+$cursor: pointer;
+$fontWeightBold: 600;
+$fontWeight: 400;
+
+// fonts
+$xsmall: 14px;
+$small: 16px;
+$medium: 20px;
+$large: 24px;
+$largeSidebarTitle: 32px;
+$xLarge: 36px;
+$x2Large: 40px;
+
+// Animation
+$fill: none;
+
+// colors
+ $colorBoxShadow: #c6c7c6;
+
+ //   Import color theme
+@import "main-theme.scss";
+@import "my-theme.scss";
+
+//  Common styles
+* {
+    &, &:before,  &:after {
+        box-sizing: $boxSizing;
+    }
+}
+
+body {
+    margin: $marginClear;
+}
+
+.cv-page {
+    display: $display;
+    padding: $mainPadding;
+    font: {
+        family: 'Inter', sans-serif;
+        style: $fontStyle;
+    }
+    line-height: 1.2;
+}
+
+ a {
+    text-decoration: $textDecoration;
+ }
+
+ .sidebar-container {
+    padding: $sidebarContainerPadding;
+ }
+
+ .container {
+    padding: $containerPadding;
+ }
+
+//  Header
+@mixin sidebarUp($fill) {
+    animation-name: sidebarUp;
+    animation-duration: 1s;
+    animation-fill-mode: $fill;
+}
+
+.sidebar {
+    background-color: var(--color-background-sidebar);
+    box-shadow: 2px 2px 5px 5px $colorBoxShadow;
+    border: 1px solid var(--color-text-headings);
+    @include sidebarUp($fill);
+}
+
+@keyframes sidebarUp {
+    80% {
+        transform: translateY(0px);
+    }
+    0% {
+        transform: translateY(350px);
+        opacity: 0;
+    }
+ }
+
+.sidebar-info {
+    h1 {
+       font: {
+        size: $x2Large;
+       }
+       color: var(--color-main-background);
+    }
+}
+
+.sidebar-name {
+    color: var(--color-accent);
+}
+
+.form-link  {
+    @extend .sidebar-name;
+}
+
+.sidebar-photo {
+    margin: $sidebarPhotoMargin;
+    width: 100%;
+    height: $mainHeight;
+    background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+}
+ 
+
+// класи для анімації фото
+
+.photo-enlarge {
+    cursor: pointer;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: scale(2) translateY(30px);
+    transform-origin: left;
+    transition: all ease 1s;
+}
+
+.photo-reduce {
+    cursor: pointer;
+    transform: scale(1);
+    transition: all ease 1s;
+}
+
+        .sidebar-title {
+            margin: $marginClear;
+            margin-top: $sidebarSubtitleMargin;
+            padding-bottom: $titlePaddingBottom;
+            font-size: $largeSidebarTitle;
+            color: var(--color-text-primary);
+            border-bottom: 5px solid var(--color-text-headings);
+        }
+
+        .sidebar-subtitle {
+        margin: $marginClear;
+        margin: $sidebarSubtitleMargin;
+        padding-bottom: 15px;
+        font-size: $large;
+        color: var(--color-text-primary);
+        }
+
+        .address {
+            p {
+                font-size: $small;
+                color: var(--color-text-primary);
+            }
+        }
+
+        .phone-link {
+            font-size: $small;
+            color: var(--color-text-primary);
+        }
+
+        .link  {
+            font-size: $small;
+            color: var(--color-accent);
+        }
+
+        .languages {
+            p {
+                font-weight: $fontWeightBold;
+                font-size: $medium;
+                color: var(--color-languages-text);
+            }
+        }
+
+        // Main
+        @mixin mainUp ($fill) {
+            animation-name: mainUp;
+            animation-duration: 1.5s;
+            animation-fill-mode: $fill;
+        }
+
+        .main-content {
+            background-color: var(--color-main-background);
+            padding: $mainContentPadding;
+            font-weight: $fontWeight;
+            @include mainUp($fill);
+        
+
+        @keyframes mainUp {
+            80% {
+                transform: translateY(0px);
+            }
+            0% {
+                transform: translateY(350px);
+                opacity: 0;
+            }
+        }
+    }
+
+        .title {
+            margin: $marginClear;
+            margin-right: 45px;
+            padding-bottom: $titlePaddingBottom;
+            font-weight: $fontWeightBold;
+            font-size: $xLarge;
+            color: var(--color-text-headings);
+            border-bottom: $titleBorderBottom
+                   solid var(--color-text-work-experience);
+        }
+    
+        .title-letter {
+            display: inline-block;
+            margin-right: 8px; 
+            padding: 3px 8px; 
+            border: 1px solid black;
+          }
+          
+
+        .work-definition {
+            font-weight: $fontWeightBold;
+        }
+
+        .job {
+            opacity: .7;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+                transition: all .1s ease-in;   
+            }
+        }
+
+                    /* Summary */
+            .summary-about {
+                font: {
+                    weight: $fontWeightBold;
+                    size: $small;
+                }
+                color: var(--color-text-primary);
+            }
+
+                        /* Skills highlights */
+            .skills {
+                 ul {
+                column-count: 2;
+                font-weight: $fontWeightBold;
+                color: var(--color-text-primary);
+                }
+            }
+
+                        /* Work Experience */
+            .work-content {
+                margin: $marginClear;
+                font-size: $small;
+                color: var(--color-text-work-experience);
+            }
+
+            .form-button {
+                margin-top: 10px;
+                height: 30px;
+                border: 1px solid var(--color-text-work-experience);
+                border-radius: 5px;
+                background-color: var(--color-background-sidebar);
+                cursor: pointer;
+            }
+
+                    /* Education */
+             .education-content {
+            color: var(--color-text-primary);
+        }
+
+        // media
+
+        @media screen and (max-width: 550px){
+            .cv-page {
+                flex-direction: column;
+                padding: 0 15px;
+                min-width: 350px;
+            }
+        
+           .sidebar-container {
+            padding: 10px;
+           }
+        
+           .sidebar-photo {
+            background-size: cover;
+           }
+        
+           .main-content {
+            padding: 25px 10px 50px;
+           }
+        
+           .title {
+            margin-right: 10px;
+           }
+        
+           .job {
+            opacity: 1;
+           }
+        }
+
