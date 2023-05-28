@@ -6,7 +6,7 @@ import { Experience } from './components/Experience';
 import WorkExperienceForm from './components/WorkExperienceForm';
 import WorkExperienceItem from './components/WorkExperienceItem';
 
-import '../src/styles/styles.css'
+import '../src/styles/styles.css';
 
 const photoLink = './CVphoto.jpg';
 
