@@ -1,6 +1,6 @@
-export function Image(props) {
+export function Image({imageLink}) {
     return (
-    <img src={props.imageLink} alt="My photo" width="100%" height="290px"/>
+    <img src={imageLink} alt="My photo" width="100%" height="290px"/>
     );
 }
 
